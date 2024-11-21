@@ -3,12 +3,17 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    flex: 1;
     /* Roboto from Google API defined in index.html */
 }
 
+/* *{
+    border: 2px solid red;
+} */
+
 img{
-    height:400px;
-    width: 400px;
+    height:200px;
+    width: 200px;
 }
 /* Styling for the header */
 ul {
@@ -26,13 +31,15 @@ a {
     display:flex;
     justify-content:  space-around;
     background-color: #1F2937 ;
-    padding: 12px;
+    padding: 12px 0px;
     color:white;
 }
 .header .links{
     display:flex;
-    gap: 6px;
+    gap: 18px;
+    color: #E5E7EB;
     align-items: center;
+    justify-content: right;
 }
 
 .header .logo{
@@ -47,29 +54,160 @@ a {
     background-color: #1F2937;
     display:flex;
     justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 50px 200px;
+
 }
 
 .welcome .left {
     display:flex;
     flex-direction: column;
     align-items: start;
+    flex:1;
 }
 .welcome .description {
-    color:#F9FAF8;
+    color: #F9FAF8;
     font-weight: 900;
     font-size: 48px;
+    margin-bottom: 15px;
 }
 .welcome .text {
     font-size: 18px;
     color: #E5E7EB;
+    margin-bottom: 15px;
+    display: flex;
+
 }
 
 .welcome button {
     background-color: #3882F6;
     color: #F9FAF8;
-    padding: 6px 12px;
+    padding: 6px 18px;
     font-weight: bold;
     border-radius: 6px;
 }
 
+.welcome img{
+    display:flex;
+    flex:1;
+}
+
+/* Need to still figure out how to align the header and welcome on either side */
+
+/* Styling for the Information div */
+
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.information .header {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+    background-color: white;
+}
+
+.information .services{
+    display :flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.information img{
+    border: 4px solid #3882F6;
+    border-radius: 6px;
+}
+
+.information .service{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.information .service .text {
+    font-size: 18px;
+    color: #E5E7EB;
+    flex-wrap:wrap;
+
+}
+
+/* Styling the quote div */
+
+.inspiration{
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    padding: 100px 500px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quote{
+    font-size: 36px;
+    display:flex;
+    color: #1F2937;
+    font-weight: lighter;
+    font-style: italic;
+    justify-content: center;
+}
+
+.author {
+    display:flex;
+    justify-content: right;
+    font-weight: bold;
+}
+
+
+/* Styling the signup */
+
+.signup {
+    display: flex;
+    background-color: #3882F6;
+    color:#F9FAF8;
+    padding:  36px 0px;
+    margin: 54px 300px;
+    justify-content: center;
+    gap: 200px;
+    border-radius: 6px;
+
+}
+
+.signup .leftside {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.signup .description{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.signup .text {
+    font-weight: lighter;
+}
+
+.signup button {
+    background-color:#3882F6;
+    border: 2px solid #F9FAF8;
+    border-radius: 3px;
+    padding: 6px 18px;
+    color:#F9FAF8;
+}
+
+
+/*  this needs to stick to the bottom  */
+.footer{
+    display:flex;
+    background-color: #1F2937;
+    justify-content: center;
+    align-items: center;
+    color:#E5E7EB;
+    padding: 24px;
+}
 
