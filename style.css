@@ -3,23 +3,28 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    flex: 1;
+    background-color: #1F2937 ;
+
     /* Roboto from Google API defined in index.html */
 }
 
-/* *{
-    border: 2px solid red;
-} */
 
 img{
     height:200px;
     width: 200px;
 }
+
+.header img{
+    width: 400px;
+    height: 200px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5)
+}
+
 /* Styling for the header */
 ul {
     list-style-type: none;
     margin: 0;
-    padding:0;
+    padding: 0;
 }
 
 a {
@@ -29,58 +34,61 @@ a {
 
 .header {
     display:flex;
-    justify-content:  space-around;
+    justify-content:  center;
+    flex-direction: column;
+    gap: 24px;
     background-color: #1F2937 ;
     padding: 12px 0px;
     color:white;
 }
-.header .links{
+
+.header-row {
+    display: flex;
+    justify-content: center;
+    margin: 0px 20%;
+    margin-bottom:76px;
+    gap: 100px;
+}
+
+/* Align left and right of both rows together*/
+.left-content {
+    margin-right: auto;
+}
+.right-content {
+    margin-left: auto;
+}
+
+.header #links{
     display:flex;
-    gap: 18px;
-    color: #E5E7EB;
+    gap: 3em;
+    color: #F9FAF8;
+    flex-direction: row;
     align-items: center;
     justify-content: right;
 }
 
-.header .logo{
+.header #logo{
     font-size: 24px;
     font-weight: bold;
     color: #F9FAF8;
 }
 
-/* Styling for the Welcome */
-
-.welcome {
-    background-color: #1F2937;
-    display:flex;
-    justify-content: space-around;
-    gap: 50px;
-    flex-wrap: wrap;
-    padding: 50px 200px;
-
-}
-
-.welcome .left {
-    display:flex;
-    flex-direction: column;
-    align-items: start;
-    flex:1;
-}
-.welcome .description {
+.description {
     color: #F9FAF8;
     font-weight: 900;
     font-size: 48px;
     margin-bottom: 15px;
 }
-.welcome .text {
+.text {
     font-size: 18px;
+    color: #E5E7EB;
     color: #E5E7EB;
     margin-bottom: 15px;
     display: flex;
 
 }
 
-.welcome button {
+button {
     background-color: #3882F6;
     color: #F9FAF8;
     padding: 6px 18px;
@@ -93,21 +101,24 @@ a {
     flex:1;
 }
 
-/* Need to still figure out how to align the header and welcome on either side */
 
 /* Styling for the Information div */
 
-.information{
+.information {
     display: flex;
     flex-direction: column;
     justify-items: center;
+    padding-bottom:2em;
+    background-color: white;
 }
 
 .information .header {
+    align-items: center;
     font-size: 36px;
     font-weight: 900;
     color: #1F2937;
     background-color: white;
+    padding: 1em;
 }
 
 .information .services{
@@ -131,9 +142,10 @@ a {
 
 .information .service .text {
     font-size: 18px;
-    color: #E5E7EB;
+    color: #636b77;
     flex-wrap:wrap;
-
+    width: 200px;
+    align-items: center;
 }
 
 /* Styling the quote div */
@@ -142,62 +154,76 @@ a {
     display: flex;
     flex-direction: column;
     background-color: #E5E7EB;
-    padding: 100px 500px;
-    justify-content: center;
+    align-items:center;
     gap: 20px;
 }
 
 .quote{
     font-size: 36px;
+    margin-top: 2em;
     display:flex;
     color: #1F2937;
     font-weight: lighter;
     font-style: italic;
     justify-content: center;
+
 }
 
 .author {
     display:flex;
     justify-content: right;
     font-weight: bold;
+    /* magic numbers, but it is ok for this project */
+    margin-bottom: 4em;
+    width: 500px; 
 }
 
 
 /* Styling the signup */
 
+.wrapper{
+    background-color: white;
+    display:flex;
+    justify-content: center;
+}
+
 .signup {
     display: flex;
     background-color: #3882F6;
     color:#F9FAF8;
-    padding:  36px 0px;
-    margin: 54px 300px;
-    justify-content: center;
-    gap: 200px;
+    margin: 5em 20em;
+    padding: 3em;
+    justify-content: space-around;
+    gap: 2em;
     border-radius: 6px;
-
+    width: 750px;
 }
 
 .signup .leftside {
     display: flex;
     flex-direction: column;
     justify-content: left;
+
 }
 
 .signup .description{
     font-size: 24px;
     font-weight: bold;
+
 }
 
 .signup .text {
     font-weight: lighter;
+
 }
 
 .signup button {
+    align-self: center;
     background-color:#3882F6;
     border: 2px solid #F9FAF8;
-    border-radius: 3px;
-    padding: 6px 18px;
+    border-radius: 6px;
     color:#F9FAF8;
+    padding: 1em, 8em;
 }
 
 
@@ -209,5 +235,5 @@ a {
     align-items: center;
     color:#E5E7EB;
     padding: 24px;
+    flex: 1;
 }
-
